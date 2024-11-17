@@ -24,19 +24,12 @@ if (isset($_POST['submit'])) {
     if ($mailResult === true) {
         echo "<script>
             alert('Mensaje enviado correctamente.');
-            window.location.href = '../../index.php';
+            window.location.href = '../../index.html';
         </script>";
     } else {
         echo "<script>
             alert('No se pudo enviar el mensaje. Error: $mailResult');
-            window.location.href = '../../index.php';
+            window.location.href = '../../index.html';
         </script>";
     }
 }
-?>
- <?php if (isset($success_message)): ?>
-      <p class="success"><?php echo $success_message; ?></p>
-    <?php endif; ?>
-    <?php if (isset($error_message)): ?>
-      <p class="error"><?php echo $error_message; ?></p>
-    <?php endif; ?>
