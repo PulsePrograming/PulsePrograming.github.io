@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PULSE PROGRAMMING</title>
+  <meta name="description" content="Impulsamos tu visión digital con soluciones web innovadoras. Transforma mos tu presencia digital en experiencias inolvidables. soluciones web, presencia digital, experiencias digitales, innovación web">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="view/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="encabezado">
+    <button class="menu-btn" onclick="togglePanel()">☰</button>
+    <h1>PULSE PROGRAMMING</h1>
+  </header>
+  <header class="sub-encabezado">
+    <h2>Impulsamos tu visión digital con soluciones web innovadoras.</h2>
+  </header>
+
+  <div class="hidden-panel">
+    <img src="view/img/Logo2.png" alt="Logo de Pulse Programming" class="panel-logo">
+    <ul class="panel-menu">
+      <li><a href="view/pages/equipo.html">EQUIPO</a></li>
+      <li><a href="view/pages/servicios.html">SERVICIOS</a></li>
+      <li><a href="view/pages/empresas.html">EMPRESAS ASOCIADAS</a></li>
+      <li><a href="view/pages/contacto.html">CONTACTO</a></li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <section class="main-text">
+      <h3>Transformamos tu presencia digital en experiencias inolvidables.</h3>
+      <p>En PULSE PROGRAMMING, no solo creamos páginas web, sino que desarrollamos plataformas que conectan, inspiran y
+        generan resultados.
+        Nuestro equipo de expertos en diseño y desarrollo está comprometido con ofrecer soluciones a medida, que se
+        adapten a las necesidades únicas de cada cliente. <br>
+        Ya sea que estés buscando un sitio web atractivo para captar nuevos clientes o una aplicación interactiva que
+        optimice tus procesos, nosotros tenemos las herramientas, el conocimiento y la pasión para hacerlo realidad.
+        <br>
+        Desde el concepto inicial hasta la entrega final, nos aseguramos de que cada detalle esté alineado con tus
+        objetivos de negocio, creando una experiencia de usuario impecable que lleve tu marca al siguiente nivel. <br>
+      </p>
+    </section>
+  </main>
+  <footer class="pie">
+    </ul>
+    <ul class="menufooter">
+      <li class="elementomenu">
+        <a href="view/pages/equipo.html" class="menu-icon">Equipo</a>
+      </li>
+      <li class="elementomenu">
+        <a href="view/pages/servicios.html" class="menu-icon">Servicios</a>
+      </li>
+      <li class="elementomenu">
+        <a href="view/pages/contacto.html" class="menu-icon">Contacto</a>
+      </li>
+    </ul>
+    <p class="text">2024 | Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+        function togglePanel() {
+      const panel = document.querySelector('.hidden-panel');
+      panel.classList.toggle('active');
+    }
+    
+    document.addEventListener('click', (event) => {
+      const panel = document.querySelector('.hidden-panel');
+      if (panel.classList.contains('active') && !panel.contains(event.target)) {
+        panel.classList.remove('panel-active');
+      }
+    });
+  </script>
+
+
+  <script>
+    const panel = document.querySelector('.hidden-panel');
+    const body = document.body;
+
+    panel.addEventListener('mouseenter', () => {
+      panel.classList.add('active');
+      body.classList.add('panel-active');
+    });
+
+    panel.addEventListener('mouseleave', () => {
+      panel.classList.remove('active');
+      body.classList.remove('panel-active');
+    });
+  </script>
+
+</body>
+
+</html>
