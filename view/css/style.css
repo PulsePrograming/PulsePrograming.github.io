@@ -1,0 +1,253 @@
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: beige;
+  transition: margin-left 0.3s ease;
+  margin: 0;
+  max-width: fit-content;
+}
+
+
+.encabezado {
+  text-align: center;
+  padding: 1vh;
+  transition: margin-left 0.3s linear;
+}
+
+.encabezado h1 {
+  font-size: 1em;
+  color: #343a40;
+}
+
+.menu-btn {
+  position: absolute;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  /* Oculto por defecto */
+}
+
+.sub-encabezado {
+  text-align: center;
+  padding: 1vh;
+  background-color: rgba(0, 0, 189, 0.856);
+  transition: margin-left 0.3s linear;
+}
+
+.sub-encabezado h2 {
+  font-size: 1em;
+  color: beige;
+  font-weight: bold;
+}
+
+.hidden-panel {
+  position: fixed;
+  left: -289px;
+  /* Ajustar para que coincida con el ancho del panel */
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  color: white;
+  transition: transform 0.3s linear;
+  padding: 20px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hidden-panel.active {
+  transform: translateX(280px);
+  /* Move the panel into view */
+}
+
+.panel-logo {
+  width: 100%;
+  /* Adjust the logo to the width of the panel */
+  height: auto;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+  /* Add transition for opacity */
+  opacity: 0;
+  /* Initially hidden */
+}
+
+.hidden-panel.active .panel-logo {
+  opacity: 1;
+  /* Show the logo when the panel is active */
+}
+
+.panel-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.panel-menu li {
+  margin: 10px 0;
+}
+
+.panel-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.panel-menu a:hover {
+  text-decoration: underline;
+}
+
+
+
+.main-content {
+  padding: 380px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/fondopw.jpg);
+  transition: margin-left 0.2s linear;
+  width: fit-content;
+}
+
+.main-text {
+  position: relative;
+  margin-top: 25px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: beige;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+}
+
+.main-text h3 {
+  font-size: 2em;
+}
+
+.main-text p {
+  font-size: 1.5em;
+}
+
+
+.pie {
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  transition: margin-left 0.3s ease;
+  bottom: 0;
+}
+
+.icon-elem {
+  list-style: none;
+}
+
+.menufooter {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+  padding: 0px;
+}
+
+.menu-icon {
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "Afacad", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Media Queries para pantallas de tabletas */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hidden-panel {
+    width: 150px;
+    left: -200px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .hidden-panel.active {
+    transform: translateX(200px);
+  }
+
+  .main-content {
+    padding: 15px;
+    background-size: cover;
+  }
+
+  .main-content h3 {
+    font-size: 1.5em;
+  }
+
+  .main-content p {
+    font-size: 1.2em;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Media Queries para pantallas de celulares */
+@media (max-width: 480px) {
+
+  .hidden-panel {
+    width: 150px;
+    left: -200px;
+  }
+
+  .hidden-panel.active {
+    transform: translateX(180px);
+  }
+
+  .main-content {
+    padding: 10px;
+    background-size: cover;
+  }
+
+  .main-content h3 {
+    font-size: 1.2em;
+  }
+
+  .main-content p {
+    font-size: 1em;
+  }
+
+  .menu-btn {
+    display: block;
+    /* Mostrar el botón en celulares */
+  }
+}
+
+/* index
